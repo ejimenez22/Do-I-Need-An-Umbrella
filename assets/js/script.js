@@ -16,7 +16,11 @@ $("#day-five").text(dayFive);
 
 // get weather for selected city
 $("#search-btn").on("click", function (event) {
-    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=491efaefbf6c39958eb32ebd66d9f046"
+    var inputArea = $(this).prev()
+    var city = inputArea.val()
+    console.log(city);
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=491efaefbf6c39958eb32ebd66d9f046";
+    console.log(apiUrl);
     fetch(apiUrl).then(function(response){
         response.json().then(function(data){
             console.log(data);
