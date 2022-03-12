@@ -1,7 +1,14 @@
 var cityName = document.querySelector("#city-search");
+var cityEl = document.querySelector("#city-name")
+var windEl = document.querySelector("#wind");
+var tempEl = document.querySelector("#temp");
+var humidityEl = document.querySelector("#humidity");
+var pressureEl = document.querySelector("#pressure");
+var iconEl = document.querySelector("#icon");
 
 // set dates for current and 5 day forcast
 var getDate = moment().format("MMM Do YY")
+$("#currentDate").text(getDate);
 
 var dayOne = moment().add(1, "days").format("MMM Do YY");
 $("#day-one").text(dayOne);
@@ -23,6 +30,16 @@ $("#search-btn").on("click", function (event) {
     console.log(apiUrl);
     fetch(apiUrl).then(function(response){
         response.json().then(function(data){
+            var cityValue = data["name"];
+            var windValue = data["wind"]["speed"];
+            var tempValue = data["main"]["temp"];
+            var humidityValue = data["main"]["humidity"];
+            var pressureValue = data["main"]["pressure"];
+            tempEl.innerHTML = "Temp: " + tempValue + "°F.";
+            windEl.innerHTML = "Wind: " + windValue + "mph";
+            humidityEl.innerHTML = "Humidity: " + humidityValue + "%";
+            pressureEl.innerHTML = "Pressure: " + pressureValue + "psi";
+            cityEl.innerHTML = cityValue;
             console.log(data);
         })
     })
