@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+    <!-- header-->
+    <div class="hero">
+        <div class="hero is-primary has-background-link hsl(217, 71%, 53%)">
+            <h1 class="title is-1 has-text-centered">Weather Dashboard</h1>
+        </div>
+    </div>
+    <!-- search form -->
+    <div id="search-section">
+        <div class="container is-pulled-left mt-5">
+            <div class="columns">
+                <div class="column content">
+                    <h3 class="">Search for a City:</h3>
+                    <input class="input is-info" type="text" placeholder="Enter a City Name" />
+                    <button class="button is-medium is-fullwidth is-info mt-3" type="button" id="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main content -->
+    <div class="column is-10 is-pulled-right mt-5">
+        <div class="columns box content" id="current-weather">
+            <div class="column">
+                <h3 class="card-header-title" id="city-name">City Name</h3>
+                <h4 id="temp">Temp:</h4>
+                <h4 id="wind">Wind:</h4>
+                <h4 id="humdity">Humdity:</h4>
+                <h4 id="UV">UV Index:</h4>
+            </div>
+        </div>
+    </div>
+    <!-- 5 day forcast -->
+    <div class="container">
+        <div class="content">
+            <h3>5-Day Forcast:</h3>
+            <div class="columns mt-5">
+                <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
+                    <div id="day-one" class="card-content">
+                        <h4 id="date-one" class="has-text-white"></h4>
+                        <div id="icon-one"></div>
+                        <h4 id="temp-one" class="has-text-white"></h4>
+                        <h4 id="humdity-one" class="has-text-white"></h4>
+                    </div>
+                </div>
+                <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
+                    <div id="day-two" class="card-content">
+                        <h4 id="date-two" class="has-text-white"></h4>
+                        <div id="icon-two"></div>
+                        <h4 id="temp-two" class="has-text-white"></h4>
+                        <h4 id="humdity-two" class="has-text-white"></h4>
+                    </div>
+                </div>
+                <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
+                    <div id="day-three" class="card-content">
+                        <h4 id="date-three" class="has-text-white"></h4>
+                        <div id="icon-three"></div>
+                        <h4 id="temp-three" class="has-text-white"></h4>
+                        <h4 id="humdity-three" class="has-text-white"></h4>
+                    </div>
+                </div>
+                <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
+                    <div id="day-four" class="card-content">
+                        <h4 id="date-four" class="has-text-white"></h4>
+                        <div id="icon-four"></div>
+                        <h4 id="temp-four" class="has-text-white"></h4>
+                        <h4 id="humdity-four" class="has-text-white"></h4>
+                    </div>
+                </div>
+                <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
+                    <div id="day-five" class="card-content">
+                        <h4 id="date-five" class="has-text-white"></h4>
+                        <div id="icon-five"></div>
+                        <h4 id="temp-five" class="has-text-white"></h4>
+                        <h4 id="humdity-five" class="has-text-white"></h4>
+                    </div>
+                </div>
+
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+                <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
