@@ -42,5 +42,6 @@ $("#search-btn").on("click", function (event) {
             cityEl.innerHTML = cityValue;
             console.log(data);
         })
+        localStorage.setItem(response, data);
     })
 })
