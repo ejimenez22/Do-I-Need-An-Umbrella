@@ -5,7 +5,6 @@ var tempEl = document.querySelector("#temp");
 var humidityEl = document.querySelector("#humidity");
 var pressureEl = document.querySelector("#pressure");
 var iconEl = document.querySelector("#icon");
-var savedCity = document.querySelector("#saved-city")
 // forcast ELs
 var tempOneEl = document.querySelector("#temp-one");
 var windOneEl = document.querySelector("#wind-one");
@@ -112,7 +111,9 @@ $("#search-btn").on("click", function (event) {
     var inputArea = $(this).prev()
     var text = inputArea.attr("id")
     var savedCity = inputArea.val()
-    
+    var savedInfo = document.createElement("Button")
+    savedInfo.innerHTML = savedCity
+    document.body.appendChild(savedInfo)
     localStorage.setItem(text, savedCity);
 })
 
