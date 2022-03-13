@@ -25,6 +25,7 @@
                     <h3 class="">Search for a City:</h3>
                     <input id="city-search" class="input is-info" type="text" placeholder="Enter a City Name" />
                     <button class="button is-medium is-fullwidth is-info mt-3" type="button" id="search-btn">Search</button>
+                    <button class="button is-medium is-fullwidth is-success mt-3" type="button" id="saved-city"></button>
                 </div>
             </div>
         </div>
@@ -52,45 +53,46 @@
             <h3>5-Day Forcast:</h3>
             <div class="columns mt-5">
                 <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
-                    <div id="day-one" class="card-content has-text-white">
-                        <h4 id="date-one" class="has-text-white"></h4>
-                        <div id="icon-one"></div>
-                        <h4 id="temp-one" class="has-text-white"></h4>
-                        <h4 id="humdity-one" class="has-text-white"></h4>
-                    </div>
+                    <h4 id="day-one" class="has-text-white"></h4>
+                    <h4 id="temp-one" class="has-text-white">Temp:</h4>
+                        <h4 id="wind-one" class="has-text-white">Wind:</h4>
+                        <h4 id="humidity-one" class="has-text-white">Humidity:</h4>
                 </div>
+            </div>
+            <div class="columns mt-5">
                 <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
-                    <div id="day-two" class="card-content has-text-white">
-                        <h4 id="date-two" class="has-text-white"></h4>
-                        <div id="icon-two"></div>
-                        <h4 id="temp-two" class="has-text-white"></h4>
-                        <h4 id="humdity-two" class="has-text-white"></h4>
-                    </div>
+                    <h4 id="day-two" class="has-text-white"></h4>
+                    <h4 id="temp-two" class="has-text-white">Temp:</h4>
+                        <h4 id="wind-two" class="has-text-white">Wind:</h4>
+                        <h4 id="humidity-two" class="has-text-white">Humidity:</h4>
                 </div>
+            </div>
+            <div class="columns mt-5">
                 <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
-                    <div id="day-three" class="card-content has-text-white">
-                        <h4 id="date-three" class="has-text-white"></h4>
-                        <div id="icon-three"></div>
-                        <h4 id="temp-three" class="has-text-white"></h4>
-                        <h4 id="humdity-three" class="has-text-white"></h4>
-                    </div>
+                    <h4 id="day-three" class="has-text-white"></h4>
+                    <h4 id="temp-three" class="has-text-white">Temp:</h4>
+                        <h4 id="wind-three" class="has-text-white">Wind:</h4>
+                        <h4 id="humidity-three" class="has-text-white">Humidity:</h4>
                 </div>
+            </div>
+            <div class="columns mt-5">
                 <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
-                    <div id="day-four" class="card-content has-text-white">
-                        <h4 id="date-four" class="has-text-white"></h4>
-                        <div id="icon-four"></div>
-                        <h4 id="temp-four" class="has-text-white"></h4>
-                        <h4 id="humdity-four" class="has-text-white"></h4>
-                    </div>
+                    <h4 id="day-four" class="has-text-white"></h4>
+                    <h4 id="temp-four" class="has-text-white">Temp:</h4>
+                        <h4 id="wind-four" class="has-text-white">Wind:</h4>
+                        <h4 id="humidity-four" class="has-text-white">Humidity:</h4>
                 </div>
+            </div>
+            <div class="columns mt-5">
                 <div class="column card has-background-link hsl(217,71%, 53%) mx-2">
-                    <div id="day-five" class="card-content has-text-white">
-                        <h4 id="date-five" class="has-text-white"></h4>
-                        <div id="icon-five"></div>
-                        <h4 id="temp-five" class="has-text-white"></h4>
-                        <h4 id="humdity-five" class="has-text-white"></h4>
-                    </div>
+                    <h4 id="day-five" class="has-text-white"></h4>
+                    <h4 id="temp-five" class="has-text-white">Temp:</h4>
+                        <h4 id="wind-five" class="has-text-white">Wind:</h4>
+                        <h4 id="humidity-five" class="has-text-white">Humidity:</h4>
                 </div>
+            </div>
+        </div>
+    </div>
 
                 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
