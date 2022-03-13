@@ -5,7 +5,11 @@ var tempEl = document.querySelector("#temp");
 var humidityEl = document.querySelector("#humidity");
 var pressureEl = document.querySelector("#pressure");
 var iconEl = document.querySelector("#icon");
-
+// forcast ELs
+var dayOneEl = document.querySelector("#day-one");
+var tempOneEl = document.querySelector("#temp-one")
+var windOneEl = document.querySelector("#wind-one")
+var humidityOneEl = document.querySelector("#humidity-one");
 // set dates for current and 5 day forcast
 var getDate = moment().format("MMM Do YY")
 $("#currentDate").text(getDate);
@@ -28,8 +32,8 @@ $("#search-btn").on("click", function (event) {
     console.log(city);
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=491efaefbf6c39958eb32ebd66d9f046";
     console.log(apiUrl);
-    fetch(apiUrl).then(function(response){
-        response.json().then(function(data){
+    fetch(apiUrl).then(function (response) {
+        response.json().then(function (data) {
             var cityValue = data["name"];
             var windValue = data["wind"]["speed"];
             var tempValue = data["main"]["temp"];
@@ -42,6 +46,13 @@ $("#search-btn").on("click", function (event) {
             cityEl.innerHTML = cityValue;
             console.log(data);
         })
-        localStorage.setItem(response, data);
+    })
+    var secondApi = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=491efaefbf6c39958eb32ebd66d9f046";
+    fetch(secondApi).then(function (response) {
+        response.json().then(function (data) {
+            var windOneVal = data["0"]["wind"]["speed"];
+            windOneEl.innerHTML = "Wind: " + windOneVal + "mph";
+            console.log(data);
+        })
     })
 })
